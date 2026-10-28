@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+<defs>
+<radialGradient id="bg" cx="50%" cy="45%" r="75%"><stop offset="0" stop-color="#141414"/><stop offset="1" stop-color="#0a0a0a"/></radialGradient>
+<linearGradient id="fadeV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<filter id="blur40"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="blur12"><feGaussianBlur stdDeviation="12"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+
+<circle cx="800" cy="560" r="260" fill="#fff" opacity=".10" filter="url(#blur40)"/>
+<circle cx="800" cy="560" r="86" fill="#EDEDED" opacity=".9"/>
+<rect x="0" y="555" width="1600" height="6" fill="#fff" opacity=".35" filter="url(#blur12)"/>
+<rect x="250" y="557" width="1100" height="2" fill="#C5FF4A" opacity=".55"/>
+<path d="M0,900 L0,554 L80,583 L160,595 L240,595 L320,599 L400,591 L480,581 L560,566 L640,537 L720,522 L800,527 L880,520 L960,532 L1040,533 L1120,557 L1200,579 L1280,585 L1360,605 L1440,606 L1520,586 L1600,573 L1600,900 Z" fill="#000" opacity="0.55"/><path d="M0,900 L0,644 L80,656 L160,648 L240,642 L320,638 L400,621 L480,611 L560,601 L640,590 L720,575 L800,569 L880,566 L960,571 L1040,574 L1120,579 L1200,604 L1280,613 L1360,627 L1440,631 L1520,653 L1600,655 L1600,900 Z" fill="#000" opacity="0.7000000000000001"/><path d="M0,900 L0,690 L80,688 L160,686 L240,677 L320,670 L400,651 L480,648 L560,636 L640,623 L720,623 L800,626 L880,627 L960,625 L1040,632 L1120,632 L1200,645 L1280,664 L1360,669 L1440,675 L1520,689 L1600,698 L1600,900 Z" fill="#000" opacity="0.8500000000000001"/>
+<rect width="1600" height="120" fill="#000"/><rect y="780" width="1600" height="120" fill="#000"/>
+<g font-family="Space Grotesk, Arial, Helvetica, sans-serif" text-anchor="middle" fill="#F5F5F5">
+<text x="800" y="700" font-size="22" letter-spacing="7" opacity=".55">PLACEHOLDER — PROJECT 01</text>
+<text x="800" y="732" font-size="16" letter-spacing="5" opacity=".35">BRAND FILM · REPLACE WITH YOUR THUMBNAIL</text>
+</g>
+</svg>

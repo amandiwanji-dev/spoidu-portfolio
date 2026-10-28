@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+<defs>
+<radialGradient id="bg" cx="50%" cy="45%" r="75%"><stop offset="0" stop-color="#141414"/><stop offset="1" stop-color="#0a0a0a"/></radialGradient>
+<linearGradient id="fadeV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<filter id="blur40"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="blur12"><feGaussianBlur stdDeviation="12"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<g opacity="0.45"><rect x="419.375" y="180.0" width="281.25" height="500" rx="34" fill="#1c1c1c" stroke="#F5F5F5" stroke-opacity=".35" stroke-width="2"/>
+<rect x="431.375" y="192.0" width="257.25" height="476" rx="24" fill="url(#fadeV)" opacity=".08"/>
+<circle cx="560" cy="390.0" r="45.0" fill="none" stroke="#F5F5F5" stroke-opacity=".6" stroke-width="2"/>
+<path d="M 547.5 372.5 L 580.0 390.0 L 547.5 407.5 Z" fill="#F5F5F5" opacity=".8"/>
+<rect x="441.375" y="560.0" width="237" height="10" rx="5" fill="#F5F5F5" opacity="0.50"/><rect x="441.375" y="586.0" width="178" height="10" rx="5" fill="#F5F5F5" opacity="0.38"/><rect x="441.375" y="612.0" width="119" height="10" rx="5" fill="#F5F5F5" opacity="0.26"/></g><g opacity="0.45"><rect x="899.375" y="180.0" width="281.25" height="500" rx="34" fill="#1c1c1c" stroke="#F5F5F5" stroke-opacity=".35" stroke-width="2"/>
+<rect x="911.375" y="192.0" width="257.25" height="476" rx="24" fill="url(#fadeV)" opacity=".08"/>
+<circle cx="1040" cy="390.0" r="45.0" fill="none" stroke="#F5F5F5" stroke-opacity=".6" stroke-width="2"/>
+<path d="M 1027.5 372.5 L 1060.0 390.0 L 1027.5 407.5 Z" fill="#F5F5F5" opacity=".8"/>
+<rect x="921.375" y="560.0" width="237" height="10" rx="5" fill="#F5F5F5" opacity="0.50"/><rect x="921.375" y="586.0" width="178" height="10" rx="5" fill="#F5F5F5" opacity="0.38"/><rect x="921.375" y="612.0" width="119" height="10" rx="5" fill="#F5F5F5" opacity="0.26"/></g><g opacity="1"><rect x="625.625" y="120.0" width="348.75" height="620" rx="34" fill="#1c1c1c" stroke="#F5F5F5" stroke-opacity=".35" stroke-width="2"/>
+<rect x="637.625" y="132.0" width="324.75" height="596" rx="24" fill="url(#fadeV)" opacity=".08"/>
+<circle cx="800" cy="380.4" r="55.8" fill="none" stroke="#F5F5F5" stroke-opacity=".6" stroke-width="2"/>
+<path d="M 784.5 358.7 L 824.8 380.4 L 784.5 402.09999999999997 Z" fill="#F5F5F5" opacity=".8"/>
+<rect x="647.625" y="580.0" width="70" height="14" rx="7" fill="#C5FF4A" opacity=".9"/><rect x="647.625" y="620.0" width="305" height="10" rx="5" fill="#F5F5F5" opacity="0.50"/><rect x="647.625" y="646.0" width="229" height="10" rx="5" fill="#F5F5F5" opacity="0.38"/><rect x="647.625" y="672.0" width="152" height="10" rx="5" fill="#F5F5F5" opacity="0.26"/></g>
+<g font-family="Space Grotesk, Arial, Helvetica, sans-serif" text-anchor="middle" fill="#F5F5F5">
+<text x="800" y="700" font-size="22" letter-spacing="7" opacity=".55">PLACEHOLDER — PROJECT 03</text>
+<text x="800" y="732" font-size="16" letter-spacing="5" opacity=".35">SOCIAL MEDIA · REPLACE WITH YOUR THUMBNAIL</text>
+</g>
+</svg>

@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    @apply relative bg-ink text-fg antialiased;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply min-h-screen bg-ink font-sans text-fg;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    @apply bg-accent text-ink;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.accent');
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  img,
+  video,
+  iframe {
+    display: block;
+  }
+
+  /* Subtle film grain over the whole page. Static, so it costs nothing per frame. */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-12;
+  }
+
+  .label {
+    @apply font-display text-[11px] font-medium uppercase leading-normal tracking-[0.18em] text-muted;
+  }
+
+  .text-hero {
+    font-size: 11.8vw;
+  }
+  @media (min-width: 640px) {
+    .text-hero {
+      font-size: clamp(3rem, 10.4vw, 10.75rem);
+    }
+  }
+
+  .text-section {
+    font-size: clamp(2.6rem, 7.4vw, 7.25rem);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+  }
+
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px theme('colors.faint');
+  }
+
+  .group:hover .group-hover\:text-outline-accent {
+    -webkit-text-stroke-color: theme('colors.accent');
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    padding-bottom: 2px;
+  }
+
+  .link-underline:hover,
+  .group:hover .link-underline,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+    background-position: 0% 100%;
+  }
+
+  .field {
+    @apply block w-full rounded-none border-0 border-b border-line bg-transparent px-0 py-3 text-base text-fg transition-colors duration-300 placeholder:text-faint/80 focus:border-fg;
+  }
+
+  .field:focus-visible {
+    outline: none;
+    box-shadow: 0 1px 0 0 theme('colors.accent');
+    border-color: theme('colors.accent');
+  }
+
+  .field[aria-invalid='true'] {
+    @apply border-red-400/70;
+  }
+
+  select.field option {
+    @apply bg-ink-800 text-fg;
+  }
+
+  /* Viewfinder corner marks on video frames. */
+  .frame-corners {
+    background:
+      linear-gradient(theme('colors.fg'), theme('colors.fg')) top left / 14px 1px,
+      linear-gradient(theme('colors.fg'), theme('colors.fg')) top left / 1px 14px,
+      linear-gradient(theme('colors.fg'), theme('colors.fg')) top right / 14px 1px,
+      linear-gradient(theme('colors.fg'), theme('colors.fg')) top right / 1px 14px,
+      linear-gradient(theme('colors.fg'), theme('colors.fg')) bottom left / 14px 1px,
+      linear-gradient(theme('colors.fg'), theme('colors.fg')) bottom left / 1px 14px,
+      linear-gradient(theme('colors.fg'), theme('colors.fg')) bottom right / 14px 1px,
+      linear-gradient(theme('colors.fg'), theme('colors.fg')) bottom right / 1px 14px;
+    background-repeat: no-repeat;
+    opacity: 0.55;
+  }
+
+  .waveform {
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(245, 245, 245, 0.22) 0 1px,
+      transparent 1px 3px
+    );
+    -webkit-mask-image: linear-gradient(transparent 20%, #000 35%, #000 65%, transparent 80%);
+    mask-image: linear-gradient(transparent 20%, #000 35%, #000 65%, transparent 80%);
+  }
+
+  .skip-link {
+    @apply fixed left-4 top-4 z-[300] -translate-y-24 rounded-full bg-accent px-5 py-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-ink transition-transform focus:translate-y-0;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes playhead {
+  from {
+    transform: translateX(2%);
+  }
+  to {
+    transform: translateX(98%);
+  }
+}
